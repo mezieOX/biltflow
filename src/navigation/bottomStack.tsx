@@ -104,14 +104,15 @@ const BottomTabStack = () => {
         }}
       />
       <Tab.Screen
-        name="WalletScreen"
-        component={WalletScreen}
+        name="TradeCryptoScreen"
+        component={MarketsScreen}
         options={{
           unmountOnBlur: true,
-          tabBarIcon: ({focused}) => walletIcon(focused),
-          tabBarLabel: 'Wallet',
+          tabBarIcon: ({focused}) => tradeCryptoIcon(focused),
+          tabBarLabel: 'Market',
         }}
       />
+
       <Tab.Screen
         name="ScanScreen"
         component={ScanScreen}
@@ -122,12 +123,12 @@ const BottomTabStack = () => {
         }}
       />
       <Tab.Screen
-        name="TradeCryptoScreen"
-        component={MarketsScreen}
+        name="WalletScreen"
+        component={WalletScreen}
         options={{
           unmountOnBlur: true,
-          tabBarIcon: ({focused}) => tradeCryptoIcon(focused),
-          tabBarLabel: 'Market',
+          tabBarIcon: ({focused}) => walletIcon(focused),
+          tabBarLabel: 'Wallet',
         }}
       />
       <Tab.Screen

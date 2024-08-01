@@ -30,13 +30,13 @@ export const LoginScreen = () => {
       </View>
       <View style={tw`px-4`}>
         <TextInputComp
-          placeholder="Email Address"
-          label="Email"
+          placeholder="Enter phone Number or Email"
+          label="Email/Phone"
           icon={require('../../../../assets/images/dark-message.png')}
         />
         <TextInputComp
           label="Password"
-          placeholder="Password"
+          placeholder="Enter Password"
           icon={require('../../../../assets/images/dark-lock.png')}
           secureTextEntry
         />

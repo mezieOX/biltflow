@@ -91,6 +91,16 @@ export const HomeScreen = () => {
             $41, 000
           </Text>
           <Text style={tw`text-green-500 text-center`}>+ $19.25 for today</Text>
+          <View style={tw`flex-row justify-end   ml-auto`}>
+            <Text style={tw`text-orange-500 bg-white rounded px-4 py-2`}>
+              Top Up
+            </Text>
+          </View>
+          <Image
+            style={tw`h-6 w-6 absolute top-4 left-5`}
+            resizeMode="contain"
+            source={require('../../../assets/images/code.png')}
+          />
         </View>
       </View>
       <View style={tw`pt-4 px-4`}>
@@ -153,7 +163,7 @@ export const HomeScreen = () => {
           View all
         </Text>
       </View>
-      <ScrollView style={tw`mx-4`} horizontal>
+      <ScrollView style={tw`mx-4`} horizontal showsHorizontalScrollIndicator>
         {ListItems.map(({id, title, image}) => (
           <TouchableOpacity
             onPress={() =>
@@ -178,7 +188,7 @@ export const HomeScreen = () => {
         </Text>
         <Text style={[tw``, {color: '#Ffffff'}]}>See more</Text>
       </View>
-      <ScrollView style={tw``} showsVerticalScrollIndicator={false}>
+      <ScrollView style={tw``} showsVerticalScrollIndicator={true}>
         {tradingHistory.map(({id}) => (
           <View
             style={tw`flex-column  mb-8 justify-center items-between text-center px-4`}

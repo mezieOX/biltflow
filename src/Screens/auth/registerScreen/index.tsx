@@ -41,7 +41,7 @@ export const RegisterScreen = () => {
         />
         <TextInputComp
           placeholder="Enter Mobile Number"
-          label="Full Name"
+          label="Enter phone number"
           icon={require('../../../../assets/images/ngn.png')}
         />
         <TextInputComp

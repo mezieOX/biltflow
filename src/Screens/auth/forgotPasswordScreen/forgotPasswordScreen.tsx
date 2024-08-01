@@ -38,7 +38,10 @@ export const TwoFactorAuth = () => {
             <Text style={tw`text-black pt-2`}>
               {confirmPin ? 'Authentication code' : 'Email'}
             </Text>
-            <TextInputComp support placeholder="user.mail@gmail.com" />
+            <TextInputComp
+              support
+              placeholder={confirmPin ? '*******' : 'user.mail@gmail.com'}
+            />
           </View>
         </View>
         <View style={tw`py-14`}>

@@ -13,7 +13,8 @@ export const SettingsScreen = () => {
   const ListItems = [
     {
       id: 1,
-      text: 'Show deal reauit dialog',
+      text: 'Accounts',
+      link: 'AccountScreen',
     },
     {
       id: 2,
@@ -21,17 +22,17 @@ export const SettingsScreen = () => {
     },
     {
       id: 3,
-      text: 'Change login password',
+      text: 'Security',
       link: 'ChangePasswordScreen',
     },
     {
       id: 4,
-      text: 'Edit Personal info',
+      text: 'Language',
       link: 'ProfileInfoScreen',
     },
     {
       id: 5,
-      text: 'Language',
+      text: 'Log Out',
       icon: TranslatorIcon,
       link: 'ChangeLanguageScreen',
     },

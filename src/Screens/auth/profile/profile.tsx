@@ -17,7 +17,7 @@ export const Profile = () => {
             onPress={() => navigation.navigate('ProfileScreen')}>
             <Image
               resizeMode="contain"
-              style={tw`w-12 h-12`}
+              style={tw`w-20 h-20`}
               source={require('../../../../assets/images/profile-pic.png')}
             />
           </TouchableOpacity>

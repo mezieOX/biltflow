@@ -16,7 +16,7 @@ export const MarketsScreen = () => {
       <View style={tw`flex-row justify-between mx-4`}>
         <View
           style={[
-            tw`text-white  rounded-xl py-4 px-1`,
+            tw`text-white  rounded-xl pt-4 px-1`,
             {width: '55%', backgroundColor: 'rgba(149, 104, 61, 1)'},
           ]}>
           <View style={tw`flex-row justify-between px-4`}>
@@ -29,8 +29,8 @@ export const MarketsScreen = () => {
             <Text style={tw`text-white`}>39,902.42</Text>
           </View>
           <View style={tw`flex-row justify-between px-4 pt-2`}>
-            <Text style={tw`text-white`}>Vol (BTC)</Text>
-            <Text style={tw`text-white`}>Vol (ETH)</Text>
+            <Text style={tw`text-gray-100`}>Vol (BTC)</Text>
+            <Text style={tw`text-gray-100`}>Vol (ETH)</Text>
           </View>
           <View style={tw`flex-row justify-between pt-1`}>
             <Text style={tw`text-white text-center`}>53,952.01</Text>

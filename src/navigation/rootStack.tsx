@@ -26,6 +26,7 @@ import {
 import BottomTabStack, {BottomStackParams} from './bottomStack';
 import {StatisticsScreen} from '../Screens/statisticScreen/statisticScreen';
 import {BillPaymentScreen} from '../Screens/auth/billPayment/billPayment';
+import {AccountScreen} from '../Screens/accountScreen/accountScreen';
 
 export type RootStackParams = {
   SplashStack: NavigatorScreenParams<SplashStackParams>;
@@ -66,6 +67,7 @@ export type RootStackParams = {
   AddWithdrawalBank: undefined;
   AddBankWithdrawalCard: undefined;
   StatisticsScreen: undefined;
+  AccountScreen: undefined;
   BillPaymentScreen: {
     features: string;
   };
@@ -139,6 +141,7 @@ export const RootNavigator = () => {
         name="BillPaymentScreen"
         component={BillPaymentScreen}
       />
+      <RootStack.Screen name="AccountScreen" component={AccountScreen} />
     </RootStack.Navigator>
   );
 };
