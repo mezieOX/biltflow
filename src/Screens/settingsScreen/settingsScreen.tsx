@@ -16,6 +16,7 @@ export const SettingsScreen = () => {
       text: 'Accounts',
       link: 'AccountScreen',
     },
+
     {
       id: 2,
       text: 'Sounds',
@@ -25,13 +26,18 @@ export const SettingsScreen = () => {
       text: 'Security',
       link: 'ChangePasswordScreen',
     },
-    {
-      id: 4,
-      text: 'Language',
-      link: 'ProfileInfoScreen',
-    },
+    // {
+    //   id: 4,
+    //   text: 'Language',
+    //   link: 'ProfileInfoScreen',
+    // },
     {
       id: 5,
+      text: 'Customer Support',
+      link: 'SupportScreen',
+    },
+    {
+      id: 6,
       text: 'Log Out',
       icon: TranslatorIcon,
       link: 'ChangeLanguageScreen',
@@ -43,14 +49,12 @@ export const SettingsScreen = () => {
       <TopSection settingsIcon={true} title="Setting" searchIcon={false} />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={tw`py-6 px-2`}>
-          {ListItems.map(({id, text, icon: Icon, link}) => (
+          {ListItems.map(({id, text, link}) => (
             <TouchableOpacity
               onPress={() => navigation.navigate(link as any)}
               style={[tw`py-6 flex-row items-center justify-between`]}
               key={id}>
               <View style={tw`flex-row items-center`}>
-                {Icon ? <Icon /> : null}
-
                 <Text style={[tw`text-base text-white px-4`]}>{text}</Text>
               </View>
               {text === 'Sounds' ||

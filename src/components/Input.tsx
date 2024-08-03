@@ -39,8 +39,8 @@ export const TextInputComp = ({
       <View
         style={[
           tw`my-2 ${
-            support ? 'border rounded-lg' : 'border-b '
-          }  flex-row items-center bg-white rounded-xl px-4`,
+            support ? 'border border-white rounded-lg' : 'border-b bg-white'
+          }  flex-row items-center  rounded-xl px-4`,
         ]}>
         {icon ? (
           <Image
@@ -182,7 +182,7 @@ export const TextAreaInputComp = ({
     <View style={tw`my-2`}>
       {label ? (
         <Text
-          style={[tw`py-2 text-xs mb-3 uppercase text-black`, styles.label]}>
+          style={[tw`py-2 text-xs mb-3 uppercase text-white`, styles.label]}>
           {label}
         </Text>
       ) : null}
@@ -191,13 +191,13 @@ export const TextAreaInputComp = ({
         numberOfLines={10}
         placeholder={placeholder}
         style={[
-          tw`bg-gray-100 h-16 px-4 py-4 rounded-lg border-2 min-w-full`,
+          tw`bg-white h-16 px-4 py-4 rounded-lg border-2  min-w-full`,
           styles.input,
           {
             height: support ? 150 : 250,
             textAlignVertical: 'top',
             backgroundColor: 'transparent',
-            borderColor: 'rgba(0, 0, 0, 0.11)',
+            borderColor: '#fff',
           },
         ]}
       />

@@ -24,28 +24,55 @@ const tradingHistory = [
   },
 ];
 
+// const ListItems = [
+//   {
+//     id: 1,
+//     title: 'Buy & Sell',
+//     image: require('../../../assets/images/h1.png'),
+//   },
+//   {
+//     id: 2,
+//     title: 'Send & Receive',
+//     image: require('../../../assets/images/h2.png'),
+//     route: 'SendAndRecieveCryptoScreen',
+//   },
+//   {
+//     id: 3,
+//     title: 'Pay Bills',
+//     image: require('../../../assets/images/h3.png'),
+//   },
+//   {
+//     id: 4,
+//     title: 'Withdraw',
+//     image: require('../../../assets/images/h4.png'),
+//     navigation: 'BillPaymentScreen',
+//   },
+// ];
+
 const ListItems = [
   {
     id: 1,
-    title: 'Buy & Sell',
-    image: require('../../../assets/images/h1.png'),
+    title: 'Data',
+    image: require('../../../assets/images/b1.png'),
+    route: 'DataScreen',
   },
   {
     id: 2,
-    title: 'Send & Receive',
-    image: require('../../../assets/images/h2.png'),
-    route: 'SendAndRecieveCryptoScreen',
+    title: 'CableTV',
+    image: require('../../../assets/images/b2.png'),
+    route: 'TvSubscriptionScreen',
   },
   {
     id: 3,
-    title: 'Pay Bills',
-    image: require('../../../assets/images/h3.png'),
+    title: 'Education',
+    image: require('../../../assets/images/b3.png'),
+    route: 'EducationScreen',
   },
   {
     id: 4,
-    title: 'Withdraw',
-    image: require('../../../assets/images/h4.png'),
-    navigation: 'BillPaymentScreen',
+    title: 'Electricity',
+    image: require('../../../assets/images/b4.png'),
+    route: 'ElectricityScreen',
   },
 ];
 
@@ -171,9 +198,9 @@ export const HomeScreen = () => {
               if (route) {
                 navigation.navigate(route as any);
               }
-              navigation.navigate('BillPaymentScreen', {
-                features: 'bill-payment',
-              });
+              // navigation.navigate('BillPaymentScreen', {
+              //   features: 'bill-payment',
+              // });
             }}
             key={id}
             style={tw`flex-col mr-10 items-center text-center`}>

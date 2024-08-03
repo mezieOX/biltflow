@@ -1,8 +1,11 @@
 import {View, Text, Image} from 'react-native';
 import React from 'react';
 import {Button} from '../../components';
+import {useRoute} from '@react-navigation/core';
 
 const SucessScreen = () => {
+  const route: any = useRoute();
+  const {text, amount} = route?.params || {};
   return (
     <View style={{backgroundColor: '#01041F', flex: 1}}>
       <Image
@@ -21,7 +24,7 @@ const SucessScreen = () => {
           fontSize: 24,
           marginTop: 43,
         }}>
-        ₦500.00
+        {amount ? amount : '₦500.00'}
       </Text>
       <Text
         style={{
@@ -30,7 +33,7 @@ const SucessScreen = () => {
           fontSize: 24,
           marginTop: 15,
         }}>
-        Data purchased successfully.
+        {text ? text : 'Data purchased successfully.'}
       </Text>
       <Text
         style={{

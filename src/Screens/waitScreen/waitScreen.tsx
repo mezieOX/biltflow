@@ -9,7 +9,7 @@ export const WaitScreen = () => {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      return navigation.navigate('SplashStack', {screen: 'GetStartedScreen'});
+      return navigation.navigate('BottomStack', {screen: 'HomeScreen'});
     }, 4000);
     return () => clearTimeout(timeout);
   }, [navigation]);

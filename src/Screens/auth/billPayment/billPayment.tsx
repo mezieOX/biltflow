@@ -22,11 +22,13 @@ const ListItems = [
     id: 3,
     title: 'Education',
     image: require('../../../../assets/images/b3.png'),
+    route: 'EducationScreen',
   },
   {
     id: 4,
     title: 'Electricity',
     image: require('../../../../assets/images/b4.png'),
+    route: 'ElectricityScreen',
   },
   {
     id: 5,
@@ -38,6 +40,7 @@ const ListItems = [
     id: 6,
     title: 'Betting',
     image: require('../../../../assets/images/b6.png'),
+    route: 'BettingScreen',
   },
 ];
 

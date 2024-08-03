@@ -32,6 +32,10 @@ import DataScreen from '../Screens/data/data-sub';
 import TvSubscriptionScreen from '../Screens/tvSubscription/TvSubscriptionScreen';
 import SendAndReceieveCryptoScreen from '../Screens/sendAndRecieveScreen.tsx/sendAndRecieveScreen';
 import SucessScreen from '../Screens/successScreen.tsx/successScreen';
+import ElectricityScreen from '../Screens/electricity/electricity';
+import EducationScreen from '../Screens/education/education';
+import BettingScreen from '../Screens/betting/betting';
+import {SupportScreen} from '../Screens/customerSupport/customerSupport';
 
 export type RootStackParams = {
   SplashStack: NavigatorScreenParams<SplashStackParams>;
@@ -73,6 +77,9 @@ export type RootStackParams = {
   AddBankWithdrawalCard: undefined;
   StatisticsScreen: undefined;
   AccountScreen: undefined;
+  ElectricityScreen: undefined;
+  EducationScreen: undefined;
+  BettingScreen: undefined;
   BillPaymentScreen: {
     features: string;
   };
@@ -80,6 +87,7 @@ export type RootStackParams = {
   TvSubscriptionScreen: undefined;
   DataScreen: undefined;
   SendAndRecieveCryptoScreen: undefined;
+  SupportScreen: undefined;
   SuccessScreen: undefined;
 };
 
@@ -163,6 +171,13 @@ export const RootNavigator = () => {
         component={SendAndReceieveCryptoScreen}
       />
       <RootStack.Screen name="SuccessScreen" component={SucessScreen} />
+      <RootStack.Screen
+        name="ElectricityScreen"
+        component={ElectricityScreen}
+      />
+      <RootStack.Screen name="EducationScreen" component={EducationScreen} />
+      <RootStack.Screen name="BettingScreen" component={BettingScreen} />
+      <RootStack.Screen name="SupportScreen" component={SupportScreen} />
     </RootStack.Navigator>
   );
 };
