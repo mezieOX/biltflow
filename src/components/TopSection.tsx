@@ -16,17 +16,19 @@ export const TopSection = ({
   settingsIcon = false,
   bitcoin = false,
   ngnIcon = false,
+  showBack = true,
 }: {
   title: string;
   searchIcon?: boolean;
   settingsIcon?: boolean;
   bitcoin?: boolean;
   ngnIcon?: boolean;
+  showBack?: boolean;
 }) => {
   const navigation = useNavigation<INavigationSetting>();
 
   return (
-    <SafeAreaView style={[tw`flex-row justify-between items-center pb-4 px-2`]}>
+    <SafeAreaView style={[tw`flex-row justify-between items-center  px-2`]}>
       <TouchableOpacity onPress={() => navigation.goBack()}>
         <ArrowLeftIcon />
       </TouchableOpacity>

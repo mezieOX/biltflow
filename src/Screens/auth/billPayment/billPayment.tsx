@@ -54,7 +54,9 @@ export const BillPaymentScreen = () => {
       <View style={[tw`mx-4 flex-row flex-wrap justify-between`]}>
         {ListItems.map(({id, title, image, route}) => (
           <TouchableOpacity
-            onPress={() => navigation.navigate(route)}
+            onPress={() => {
+              if (route) navigation.navigate(route);
+            }}
             key={id}
             style={tw`flex-col w-1/3 mb-10 items-center text-center`}>
             <Image source={image} style={tw`h-12 w-12`} resizeMode="contain" />

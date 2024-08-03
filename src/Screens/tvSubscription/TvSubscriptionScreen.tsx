@@ -275,7 +275,8 @@ const TvSubscriptionScreen = () => {
               index={1}
               backdropComponent={BottomSheetBackdrop}
               snapPoints={['60%', '65%']}>
-              <BottomSheetView style={{flex: 1, paddingHorizontal: 16}}>
+              <BottomSheetView
+                style={{flex: 1, paddingHorizontal: 16, paddingBottom: 20}}>
                 <Text style={tw`font-bold text-xl text-center mt-8`}>₦100</Text>
                 <View
                   style={{
@@ -317,7 +318,8 @@ const TvSubscriptionScreen = () => {
           index={1}
           backdropComponent={BottomSheetBackdrop}
           snapPoints={['60%', '65%']}>
-          <BottomSheetView style={{flex: 1, paddingHorizontal: 16}}>
+          <BottomSheetView
+            style={{flex: 1, paddingHorizontal: 16, marginBottom: 10}}>
             <Image
               source={require('../../../assets/images/square-password.png')}
               style={{marginHorizontal: 'auto', marginTop: 5}}

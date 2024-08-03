@@ -240,7 +240,8 @@ const AirtimeScreen = () => {
               ref={bottomSheetPayModalRef}
               index={1}
               snapPoints={['60%', '65%']}>
-              <BottomSheetView style={{flex: 1, paddingHorizontal: 16}}>
+              <BottomSheetView
+                style={{flex: 1, paddingHorizontal: 16, paddingBottom: 20}}>
                 <Text style={tw`font-bold text-xl text-center mt-12`}>
                   ₦500
                 </Text>

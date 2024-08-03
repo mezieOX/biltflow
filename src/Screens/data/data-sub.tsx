@@ -310,7 +310,8 @@ const DataScreen = () => {
               index={1}
               backdropComponent={BottomSheetBackdrop}
               snapPoints={['60%', '65%']}>
-              <BottomSheetView style={{flex: 1, paddingHorizontal: 16}}>
+              <BottomSheetView
+                style={{flex: 1, paddingHorizontal: 16, paddingBottom: 20}}>
                 <Text style={tw`font-bold text-xl text-center mt-12`}>
                   ₦500
                 </Text>
@@ -382,7 +383,7 @@ const DataScreen = () => {
                     To proceed, enter the send to your email or Phone
                   </Text>
                   <AppKeypad.Display length={4} value={password} />
-                  <View style={{marginTop: 80}}>
+                  <View style={{marginTop: 80, marginBottom: 10}}>
                     <AppKeypad
                       length={4}
                       onCodeChange={setPassword}

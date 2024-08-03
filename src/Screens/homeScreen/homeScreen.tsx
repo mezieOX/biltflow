@@ -69,12 +69,17 @@ export const HomeScreen = () => {
 
   return (
     <ScrollView style={[tw``, {backgroundColor: '#01041F'}]}>
-      <TopSection settingsIcon={false} title="Home" searchIcon={true} />
+      <TopSection
+        showBack={false}
+        settingsIcon={false}
+        title="Home"
+        searchIcon={true}
+      />
       <ScrollView horizontal>
         <Text
           style={[
-            tw`text-white px-4 py-2 my-4 overflow-x-hidden`,
-            {backgroundColor: '#B1C7FF'},
+            tw`text-white px-4 py-2 overflow-x-hidden`,
+            {backgroundColor: '#B1C7FF', marginBottom: 22},
           ]}>
           Market Cap $780,091 BTC Dominance 32.11% Cryptocurrencies 3 0903
         </Text>
@@ -93,9 +98,9 @@ export const HomeScreen = () => {
           </Text>
           <Text style={tw`text-green-500 text-center`}>+ $19.25 for today</Text>
           <View style={tw`flex-row justify-end  ml-auto`}>
-            <Text style={tw`text-orange-500 bg-white rounded px-4 py-2`}>
-              Top Up
-            </Text>
+            <View style={tw`bg-white rounded-lg px-4 py-2`}>
+              <Text style={tw`text-orange-500 font-bold`}>Top Up</Text>
+            </View>
           </View>
           <Image
             style={tw`h-6 w-6 absolute top-4 left-5`}
@@ -104,20 +109,31 @@ export const HomeScreen = () => {
           />
         </View>
       </View>
-      <View style={tw`pt-4 px-4`}>
-        <Button
+      <View style={tw`pt-4 px-4 =`}>
+        <TouchableOpacity
+          style={{
+            backgroundColor: '#E5770E',
+            borderRadius: 8,
+          }}
           onPress={() => {
             navigation.navigate('StatisticsScreen');
-          }}
-          login
-          title={'Market Statistics'}
-        />
+          }}>
+          <Text style={[tw`text-white text-lg text-center py-1`]}>
+            Market Statistics
+          </Text>
+        </TouchableOpacity>
       </View>
-      <ScrollView style={tw`mx-4 py-4`} horizontal>
+      <View
+        style={[
+          tw`mx-4 py-4`,
+          {
+            flexDirection: 'row',
+          },
+        ]}>
         <View
           style={[
-            tw`border mr-4 border-orange-500 px-4 pt-4 pb-20 flex-row  rounded-xl`,
-            {backgroundColor: 'rgba(229, 119, 14, 0.26)', minwidth: '200px'},
+            tw`border mr-4 border-orange-500 pt-4 flex-1 px-4 pb-20 flex-row rounded-xl`,
+            {backgroundColor: 'rgba(229, 119, 14, 0.26)'},
           ]}>
           <View style={tw``}>
             <Image
@@ -135,7 +151,7 @@ export const HomeScreen = () => {
         </View>
         <View
           style={[
-            tw`border min-w-1/2 border-orange-500 px-4 pt-4 pb-20 flex-row  rounded-xl`,
+            tw`border flex-1 border-orange-500 pt-4 px-4 pb-20 flex-row  rounded-xl`,
             {backgroundColor: 'rgba(229, 119, 14, 0.26)'},
           ]}>
           <View>
@@ -151,8 +167,8 @@ export const HomeScreen = () => {
             <Text style={tw`text-white font-bold text-lg`}>355.01ETH</Text>
           </View>
         </View>
-      </ScrollView>
-      <View style={tw`px-4 py-8 flex-row px-4 justify-between items-center`}>
+      </View>
+      <View style={tw`px-4 py-8 flex-row px-6 justify-between items-center`}>
         <Text style={tw`font-bold text-lg text-white`}>Features</Text>
         <Text
           onPress={() =>
@@ -164,7 +180,14 @@ export const HomeScreen = () => {
           View all
         </Text>
       </View>
-      <ScrollView style={tw`mx-4`} horizontal showsHorizontalScrollIndicator>
+      <View
+        style={[
+          tw`mx-4`,
+          {
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+          },
+        ]}>
         {ListItems.map(({id, title, image, route}) => (
           <TouchableOpacity
             onPress={() => {
@@ -176,12 +199,19 @@ export const HomeScreen = () => {
               });
             }}
             key={id}
-            style={tw`flex-col mr-10 items-center text-center`}>
-            <Image source={image} style={tw`h-12 w-12`} resizeMode="contain" />
+            style={tw`flex-col items-center text-center`}>
+            <Image
+              source={image}
+              style={{
+                width: 50,
+                height: 50,
+              }}
+              resizeMode="contain"
+            />
             <Text style={tw`text-white pt-1`}>{title}</Text>
           </TouchableOpacity>
         ))}
-      </ScrollView>
+      </View>
       <View
         style={[
           tw`px-4 py-2 flex-row px-4 my-8 mx-4 rounded-xl justify-between items-center`,
