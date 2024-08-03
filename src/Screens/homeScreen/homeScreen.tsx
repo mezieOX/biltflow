@@ -24,55 +24,28 @@ const tradingHistory = [
   },
 ];
 
-// const ListItems = [
-//   {
-//     id: 1,
-//     title: 'Buy & Sell',
-//     image: require('../../../assets/images/h1.png'),
-//   },
-//   {
-//     id: 2,
-//     title: 'Send & Receive',
-//     image: require('../../../assets/images/h2.png'),
-//     route: 'SendAndRecieveCryptoScreen',
-//   },
-//   {
-//     id: 3,
-//     title: 'Pay Bills',
-//     image: require('../../../assets/images/h3.png'),
-//   },
-//   {
-//     id: 4,
-//     title: 'Withdraw',
-//     image: require('../../../assets/images/h4.png'),
-//     navigation: 'BillPaymentScreen',
-//   },
-// ];
-
 const ListItems = [
   {
     id: 1,
-    title: 'Data',
-    image: require('../../../assets/images/b1.png'),
-    route: 'DataScreen',
+    title: 'Buy & Sell',
+    image: require('../../../assets/images/h1.png'),
   },
   {
     id: 2,
-    title: 'CableTV',
-    image: require('../../../assets/images/b2.png'),
-    route: 'TvSubscriptionScreen',
+    title: 'Send & Receive',
+    image: require('../../../assets/images/h2.png'),
+    route: 'SendAndRecieveCryptoScreen',
   },
   {
     id: 3,
-    title: 'Education',
-    image: require('../../../assets/images/b3.png'),
-    route: 'EducationScreen',
+    title: 'Pay Bills',
+    image: require('../../../assets/images/h3.png'),
   },
   {
     id: 4,
-    title: 'Electricity',
-    image: require('../../../assets/images/b4.png'),
-    route: 'ElectricityScreen',
+    title: 'Withdraw',
+    image: require('../../../assets/images/h4.png'),
+    navigation: 'BillPaymentScreen',
   },
 ];
 
