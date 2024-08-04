@@ -36,6 +36,7 @@ import ElectricityScreen from '../Screens/electricity/electricity';
 import EducationScreen from '../Screens/education/education';
 import BettingScreen from '../Screens/betting/betting';
 import {SupportScreen} from '../Screens/customerSupport/customerSupport';
+import {CardScreen} from '../Screens/cardScreen/cardScreen';
 
 export type RootStackParams = {
   SplashStack: NavigatorScreenParams<SplashStackParams>;
@@ -80,6 +81,7 @@ export type RootStackParams = {
   ElectricityScreen: undefined;
   EducationScreen: undefined;
   BettingScreen: undefined;
+  CardScreen: undefined;
   BillPaymentScreen: {
     features: string;
   };
@@ -178,6 +180,7 @@ export const RootNavigator = () => {
       <RootStack.Screen name="EducationScreen" component={EducationScreen} />
       <RootStack.Screen name="BettingScreen" component={BettingScreen} />
       <RootStack.Screen name="SupportScreen" component={SupportScreen} />
+      <RootStack.Screen name="CardScreen" component={CardScreen} />
     </RootStack.Navigator>
   );
 };
