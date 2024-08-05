@@ -17,7 +17,6 @@ export {ChooseCryptoScreen} from './chooseCryptoScreen/chooseCryptoScreen';
 export {TransactionScreen} from './transactionScreen/transactionScreen';
 export {AboutScreen} from './aboutScreen/aboutScreen';
 export {ReceiveCoinScreen} from './receiveCoinScreen/receiveCoinScreen';
-export {SendCryptoCoin} from './sendCryptoCoin/sendCryptoCoin';
 export {HelpCenterScreen} from './helpCenterScreen/helpCenterScreen';
 export {ChatScreen} from './chatScreen/chatScreen';
 export {AddWithdrawalBank} from './addWithdrawalBank/addWithdrawalBank';

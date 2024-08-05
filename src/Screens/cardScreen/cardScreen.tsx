@@ -27,8 +27,9 @@ const tradingHistory = [
 const ListItems = [
   {
     id: 1,
-    title: 'Buy & Sell',
+    title: 'Buy & Sel',
     image: require('../../../assets/images/h1.png'),
+    route: 'BuyAndSellScreen',
   },
   {
     id: 2,

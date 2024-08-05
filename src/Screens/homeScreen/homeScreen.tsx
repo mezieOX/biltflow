@@ -29,6 +29,7 @@ const ListItems = [
     id: 1,
     title: 'Buy & Sell',
     image: require('../../../assets/images/h1.png'),
+    route: 'BuyAndSellScreen',
   },
   {
     id: 2,
@@ -45,6 +46,7 @@ const ListItems = [
     id: 4,
     title: 'Withdraw',
     image: require('../../../assets/images/h4.png'),
+    route: 'WithdrawalScreen',
     navigation: 'BillPaymentScreen',
   },
 ];

@@ -19,12 +19,10 @@ import {
   ProfileInfoScreen,
   ProfileScreen,
   ReceiveCoinScreen,
-  SendCryptoCoin,
   SettingsScreen,
   TransactionScreen,
 } from '../Screens';
 import BottomTabStack, {BottomStackParams} from './bottomStack';
-import {StatisticsScreen} from '../Screens/statisticScreen/statisticScreen';
 import {BillPaymentScreen} from '../Screens/auth/billPayment/billPayment';
 import {AccountScreen} from '../Screens/accountScreen/accountScreen';
 import AirtimeScreen from '../Screens/airtime/airtime';
@@ -33,10 +31,14 @@ import TvSubscriptionScreen from '../Screens/tvSubscription/TvSubscriptionScreen
 import SendAndReceieveCryptoScreen from '../Screens/sendAndRecieveScreen.tsx/sendAndRecieveScreen';
 import SucessScreen from '../Screens/successScreen.tsx/successScreen';
 import ElectricityScreen from '../Screens/electricity/electricity';
-import EducationScreen from '../Screens/education/education';
 import BettingScreen from '../Screens/betting/betting';
 import {SupportScreen} from '../Screens/customerSupport/customerSupport';
+import SendAndReceiveOptionCryptoScreen from '../Screens/sendAndRecieveScreen.tsx/sendAndReceieveOptionCryptoScreen/sendAndReceieveOptionCryptoScreen';
 import {CardScreen} from '../Screens/cardScreen/cardScreen';
+import BuyAndSellScreen from '../Screens/buyAndSellScreen/buyAndSellScreen';
+import {StatisticsScreen} from '../Screens/statisticScreen/statisticScreen';
+import {CreateCoinScreen} from '../Screens/createCoin/createCoin';
+import {SellCryptoScreen} from '../Screens/sellCrypto/sellCrypto';
 
 export type RootStackParams = {
   SplashStack: NavigatorScreenParams<SplashStackParams>;
@@ -71,7 +73,6 @@ export type RootStackParams = {
   TransactionScreen: undefined;
   AboutScreen: undefined;
   ReceiveCoinScreen: undefined;
-  SendCryptoCoin: undefined;
   HelpCenterScreen: undefined;
   ChatScreen: undefined;
   AddWithdrawalBank: undefined;
@@ -79,8 +80,8 @@ export type RootStackParams = {
   StatisticsScreen: undefined;
   AccountScreen: undefined;
   ElectricityScreen: undefined;
-  EducationScreen: undefined;
   BettingScreen: undefined;
+  SendAndReceiveOptionCryptoScreen: undefined;
   CardScreen: undefined;
   BillPaymentScreen: {
     features: string;
@@ -91,6 +92,9 @@ export type RootStackParams = {
   SendAndRecieveCryptoScreen: undefined;
   SupportScreen: undefined;
   SuccessScreen: undefined;
+  BuyAndSellScreen: undefined;
+  CreateCoinScreen: undefined;
+  SellCryptoScreen: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStackParams>();
@@ -145,7 +149,6 @@ export const RootNavigator = () => {
         name="ReceiveCoinScreen"
         component={ReceiveCoinScreen}
       />
-      <RootStack.Screen name="SendCryptoCoin" component={SendCryptoCoin} />
       <RootStack.Screen name="HelpCenterScreen" component={HelpCenterScreen} />
       <RootStack.Screen name="ChatScreen" component={ChatScreen} />
       <RootStack.Screen
@@ -177,10 +180,16 @@ export const RootNavigator = () => {
         name="ElectricityScreen"
         component={ElectricityScreen}
       />
-      <RootStack.Screen name="EducationScreen" component={EducationScreen} />
       <RootStack.Screen name="BettingScreen" component={BettingScreen} />
       <RootStack.Screen name="SupportScreen" component={SupportScreen} />
       <RootStack.Screen name="CardScreen" component={CardScreen} />
+      <RootStack.Screen
+        name="SendAndReceiveOptionCryptoScreen"
+        component={SendAndReceiveOptionCryptoScreen}
+      />
+      <RootStack.Screen name="BuyAndSellScreen" component={BuyAndSellScreen} />
+      <RootStack.Screen name="CreateCoinScreen" component={CreateCoinScreen} />
+      <RootStack.Screen name="SellCryptoScreen" component={SellCryptoScreen} />
     </RootStack.Navigator>
   );
 };

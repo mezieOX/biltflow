@@ -19,12 +19,6 @@ const ListItems = [
     route: 'TvSubscriptionScreen',
   },
   {
-    id: 3,
-    title: 'Education',
-    image: require('../../../../assets/images/b3.png'),
-    route: 'EducationScreen',
-  },
-  {
     id: 4,
     title: 'Electricity',
     image: require('../../../../assets/images/b4.png'),
