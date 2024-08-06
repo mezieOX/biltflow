@@ -25,7 +25,8 @@ export const TopSection = ({
   const navigation = useNavigation<INavigationSetting>();
 
   return (
-    <SafeAreaView style={[tw`flex-row justify-between items-center  px-2`]}>
+    <SafeAreaView
+      style={[tw`flex-row justify-between items-center  px-2 py-6`]}>
       {showBack && (
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <ArrowLeftIcon />

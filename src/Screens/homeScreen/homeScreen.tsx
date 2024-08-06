@@ -34,26 +34,25 @@ const ListItems = [
     id: 1,
     title: 'Buy & Sell',
     image: require('../../../assets/images/h1.png'),
-    route: 'BuyAndSellScreen',
+    navigation: 'BuyAndSellCryptoScreen',
   },
   {
     id: 2,
     title: 'Send & Receive',
     image: require('../../../assets/images/h2.png'),
-    route: 'SendAndRecieveCryptoScreen',
+    navigation: 'SendAndRecieveCryptoScreen',
   },
   {
     id: 3,
     title: 'Pay Bills',
     image: require('../../../assets/images/h3.png'),
+    navigation: 'BillPaymentScreen',
   },
-
   {
-    id: 6,
+    id: 4,
     title: 'Withdraw',
     image: require('../../../assets/images/h4.png'),
-    route: 'WithdrawalScreen',
-    navigation: 'BillPaymentScreen',
+    navigation: 'AddBankWithdrawalCard',
   },
 ];
 
@@ -190,11 +189,11 @@ export const HomeScreen = () => {
             <TouchableOpacity
               onPress={() => {
                 if (push) {
-                  navigation.navigate(push as any);
+                  return navigation.navigate(push as any);
                 }
-                // navigation.navigate('BillPaymentScreen', {
-                //   features: 'bill-payment',
-                // });
+                navigation.navigate('BillPaymentScreen', {
+                  features: 'bill-payment',
+                });
               }}
               key={id}
               style={tw`flex-col items-center text-center`}>
