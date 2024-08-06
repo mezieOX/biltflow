@@ -10,7 +10,7 @@ const ListItems = [
     id: 1,
     title: 'Data',
     image: require('../../../assets/images/b1.png'),
-    route: 'DataSubscriptionScreen',
+    route: 'DataScreen',
   },
   {
     id: 2,
