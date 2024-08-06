@@ -2,12 +2,9 @@
 import React, {useState} from 'react';
 import {ScrollView, Text, View} from 'react-native';
 import {s as tw} from 'react-native-wind';
-import {useNavigation} from '@react-navigation/native';
 import {Button, TextInputComp, TopSection} from '../../components';
-import {INavigationSetting} from '../../navigation/type';
 
 export const SellCryptoScreen = () => {
-  const navigation = useNavigation<INavigationSetting>();
   const [, setToggle] = useState<boolean>(false);
 
   return (
@@ -21,7 +18,7 @@ export const SellCryptoScreen = () => {
         <TextInputComp placeholder="Ethereum" label="Blockchain" />
 
         <View style={tw`pt-4`}>
-          <Button login title={'CreateCoin'} />
+          <Button login title={'Create Coin'} />
           <View style={tw`flex-row items-center text-center justify-center`}>
             <Text
               onPress={() => setToggle(prev => !prev)}

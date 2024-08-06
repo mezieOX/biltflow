@@ -21,6 +21,7 @@ export const TextInputComp = ({
   secureTextEntry,
   keyboardType,
   label,
+  className,
   iconLeft,
 }: {
   icon?: ImageSourcePropType;
@@ -32,6 +33,7 @@ export const TextInputComp = ({
   secureTextEntry?: boolean;
   keyboardType?: KeyboardTypeOptions;
   label?: string;
+  className?: string;
 }) => {
   return (
     <>
@@ -56,7 +58,7 @@ export const TextInputComp = ({
           keyboardType={keyboardType}
           placeholder={placeholder}
           style={[
-            tw`h-14 px-4 rounded-lg placeholder:text-red-500 outline-0  min-w-full`,
+            tw`h-14 px-4 rounded-lg placeholder:text-red-500 outline-0  min-w-full ${className}`,
           ]}
           secureTextEntry={secureTextEntry}
         />
@@ -173,10 +175,12 @@ export const TextAreaInputComp = ({
   label,
   placeholder,
   support,
+  className,
 }: {
   label?: string;
   placeholder: string;
   support?: boolean;
+  className: string;
 }) => {
   return (
     <View style={tw`my-2`}>
@@ -191,7 +195,7 @@ export const TextAreaInputComp = ({
         numberOfLines={10}
         placeholder={placeholder}
         style={[
-          tw`bg-white h-16 px-4 py-4 rounded-lg border-2  min-w-full`,
+          tw`bg-white h-16 px-4 py-4 rounded-lg border-2  min-w-full ${className}`,
           styles.input,
           {
             height: support ? 150 : 250,

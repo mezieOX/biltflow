@@ -54,14 +54,19 @@ export const SupportScreen = () => {
       </Text>
       <View style={tw`px-4 pt-8 pb-20`}>
         <TextInputComp
+          className="text-white"
           support={true}
           placeholder="Enter phone Number or Email"
         />
         <TextInputComp
+          className="text-white"
           support={true}
           placeholder="Enter phone Number or Email"
         />
-        <TextAreaInputComp placeholder="" />
+        <TextAreaInputComp
+          className="text-white placeholder:!text-white"
+          placeholder=""
+        />
         <View style={tw`mb-40 pt-10`}>
           <Button title="Send" login />
         </View>

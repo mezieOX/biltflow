@@ -4,7 +4,6 @@ export {GetStartedScreen} from './getStartedScreen/index';
 export {HomeScreen} from './homeScreen/homeScreen';
 export {WalletScreen} from './walletScreen/walletScreen';
 export {NotificationScreen} from './notificationScreen/notificationScreen';
-export {ProfileScreen} from './profileScreen/profileScreen';
 export {CryptoSellAndSwap} from './cryptoSellAndSwap/cryptoSellAndSwap';
 export {AddMoneyScreen} from './addMoney/addMoney';
 export {AddBankCardScreen} from './addBankCard/addBankCard';

@@ -14,8 +14,7 @@ export const WalletScreen = () => {
   const navigation = useNavigation<INavigationSetting>();
 
   return (
-    <View style={{flex: 1, backgroundColor: '#01041F'}}>
-      <TopSection title="Buy & Sell" searchIcon={false} />
+    <View style={[tw`flex-1`, {backgroundColor: '#01041F'}]}>
       <View style={tw`mx-4`}>
         <Text style={tw`text-white pt-8 pb-4 text-center text-2xl font-bold`}>
           My wallet

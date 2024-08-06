@@ -42,8 +42,9 @@ const ListItems = [
     title: 'Pay Bills',
     image: require('../../../assets/images/h3.png'),
   },
+  
   {
-    id: 4,
+    id: 6,
     title: 'Withdraw',
     image: require('../../../assets/images/h4.png'),
     route: 'WithdrawalScreen',
@@ -171,11 +172,11 @@ export const HomeScreen = () => {
           <TouchableOpacity
             onPress={() => {
               if (route) {
-                navigation.navigate(route as any);
+                return navigation.navigate(route as any);
               }
-              // navigation.navigate('BillPaymentScreen', {
-              //   features: 'bill-payment',
-              // });
+              navigation.navigate('BillPaymentScreen', {
+                features: 'bill-payment',
+              });
             }}
             key={id}
             style={tw`flex-col mr-10 items-center text-center`}>

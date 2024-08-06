@@ -4,7 +4,7 @@ import {s as tw} from 'react-native-wind';
 import {TopSection} from '../../components';
 import {useNavigation} from '@react-navigation/native';
 import {INavigationSetting} from '../../navigation/type';
-import {ArrowRightIcon, TranslatorIcon} from '../../../assets/svgIcons';
+import {ArrowRightIcon} from '../../../assets/svgIcons';
 
 export const SettingsScreen = () => {
   const navigation = useNavigation<INavigationSetting>();
@@ -19,34 +19,45 @@ export const SettingsScreen = () => {
 
     {
       id: 2,
-      text: 'Sounds',
-    },
-    {
-      id: 3,
       text: 'Security',
       link: 'ChangePasswordScreen',
     },
-    // {
-    //   id: 4,
-    //   text: 'Language',
-    //   link: 'ProfileInfoScreen',
-    // },
+    {
+      id: 3,
+      text: ' Language',
+      link: 'ChangeLanguageScreen',
+    },
+    {
+      id: 4,
+      text: 'Change theme',
+    },
     {
       id: 5,
+      text: 'Enable push notification',
+    },
+    {
+      id: 6,
+      text: 'Price Alert',
+      link: 'CreatePriceAlertScreen',
+    },
+    {
+      id: 6,
       text: 'Customer Support',
       link: 'SupportScreen',
     },
     {
-      id: 6,
+      id: 7,
       text: 'Log Out',
-      icon: TranslatorIcon,
-      link: 'ChangeLanguageScreen',
+    },
+    {
+      id: 8,
+      text: 'Delete Account',
     },
   ];
 
   return (
     <View style={[tw`flex-1 pr-2 pl-1`, {backgroundColor: '#01041F'}]}>
-      <TopSection settingsIcon={true} title="Setting" searchIcon={false} />
+      <TopSection settingsIcon={true} title="Settings" searchIcon={false} />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={tw`py-6 px-2`}>
           {ListItems.map(({id, text, link}) => (
@@ -55,10 +66,23 @@ export const SettingsScreen = () => {
               style={[tw`py-6 flex-row items-center justify-between`]}
               key={id}>
               <View style={tw`flex-row items-center`}>
-                <Text style={[tw`text-base text-white px-4`]}>{text}</Text>
+                <Text
+                  style={[
+                    tw`text-base text-white px-4`,
+                    {
+                      color:
+                        text === 'Delete Account'
+                          ? 'rgba(247, 26, 26, 1)'
+                          : text === 'Log Out'
+                          ? 'rgba(229, 119, 14, 1)'
+                          : '#fff',
+                    },
+                  ]}>
+                  {text}
+                </Text>
               </View>
-              {text === 'Sounds' ||
-              text === 'Switch to Dark mood' ||
+              {text === 'Enable push notification' ||
+              text === 'Change theme' ||
               text === 'Language' ? (
                 text === 'Language' ? (
                   <Text style={[tw`text-base px-4`]}>English</Text>

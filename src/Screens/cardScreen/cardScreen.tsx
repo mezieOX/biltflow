@@ -27,7 +27,7 @@ const tradingHistory = [
 const ListItems = [
   {
     id: 1,
-    title: 'Buy & Sel',
+    title: 'Buy & Sell',
     image: require('../../../assets/images/h1.png'),
     route: 'BuyAndSellScreen',
   },
@@ -157,11 +157,11 @@ export const CardScreen = () => {
           <TouchableOpacity
             onPress={() => {
               if (route) {
-                navigation.navigate(route as any);
+                return navigation.navigate(route as any);
               }
-              // navigation.navigate('BillPaymentScreen', {
-              //   features: 'bill-payment',
-              // });
+              navigation.navigate('BillPaymentScreen', {
+                features: 'bill-payment',
+              });
             }}
             key={id}
             style={tw`flex-col mr-10 items-center text-center`}>

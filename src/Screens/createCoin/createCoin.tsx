@@ -2,23 +2,40 @@
 import React, {useState} from 'react';
 import {ScrollView, Text, View} from 'react-native';
 import {s as tw} from 'react-native-wind';
-import {useNavigation} from '@react-navigation/native';
 import {Button, TextInputComp, TopSection} from '../../components';
-import {INavigationSetting} from '../../navigation/type';
 
 export const CreateCoinScreen = () => {
-  const navigation = useNavigation<INavigationSetting>();
   const [, setToggle] = useState<boolean>(false);
 
   return (
     <ScrollView style={{flex: 1, backgroundColor: '#01041F', paddingTop: 30}}>
       <TopSection title="Create Your Coin" searchIcon={false} />
       <View style={tw`px-4`}>
-        <TextInputComp placeholder="EcoCoin" label="Coin Name" />
-        <TextInputComp placeholder="ECO" label="Symbol" />
-        <TextInputComp placeholder="1M Coins" label="Initial Supply" />
-        <TextInputComp placeholder="18" label="Decimal Places" />
-        <TextInputComp placeholder="Ethereum" label="Blockchain" />
+        <TextInputComp
+          className="text-white"
+          placeholder="EcoCoin"
+          label="Coin Name"
+        />
+        <TextInputComp
+          className="text-white"
+          placeholder="ECO"
+          label="Symbol"
+        />
+        <TextInputComp
+          className="text-white"
+          placeholder="1M Coins"
+          label="Initial Supply"
+        />
+        <TextInputComp
+          className="text-white"
+          placeholder="18"
+          label="Decimal Places"
+        />
+        <TextInputComp
+          className="text-white"
+          placeholder="Ethereum"
+          label="Blockchain"
+        />
 
         <View style={tw`pt-4`}>
           <Button login title={'CreateCoin'} />

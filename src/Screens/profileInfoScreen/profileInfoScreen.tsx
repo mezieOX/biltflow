@@ -2,13 +2,9 @@ import React from 'react';
 import {Image, ScrollView, Text, TouchableOpacity, View} from 'react-native';
 import {s as tw} from 'react-native-wind';
 import {TopSection} from '../../components';
-import {useNavigation} from '@react-navigation/native';
-import {INavigationSetting} from '../../navigation/type';
 import {ArrowRightIcon} from '../../../assets/svgIcons';
 
 export const ProfileInfoScreen = () => {
-  const navigation = useNavigation<INavigationSetting>();
-
   const ListItems = [
     {
       id: 1,
@@ -41,8 +37,7 @@ export const ProfileInfoScreen = () => {
       />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={tw`flex-column justify-center items-center px-4`}>
-          <TouchableOpacity
-            onPress={() => navigation.navigate('ProfileScreen')}>
+          <TouchableOpacity>
             <Image
               resizeMode="contain"
               style={tw`w-12 h-12`}

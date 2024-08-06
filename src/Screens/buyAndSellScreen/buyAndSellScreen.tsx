@@ -203,10 +203,7 @@ const BuyAndSellScreen = () => {
               marginTop: 28,
               flex: 1,
             }}>
-            <TouchableOpacity
-              onPress={() =>
-                navigation.navigate('SendAndReceiveOptionCryptoScreen')
-              }>
+            <TouchableOpacity>
               <View
                 style={{
                   flexDirection: 'row',

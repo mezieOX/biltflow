@@ -17,7 +17,6 @@ import {
   HelpCenterScreen,
   NotificationScreen,
   ProfileInfoScreen,
-  ProfileScreen,
   ReceiveCoinScreen,
   SettingsScreen,
   TransactionScreen,
@@ -39,6 +38,9 @@ import BuyAndSellScreen from '../Screens/buyAndSellScreen/buyAndSellScreen';
 import {StatisticsScreen} from '../Screens/statisticScreen/statisticScreen';
 import {CreateCoinScreen} from '../Screens/createCoin/createCoin';
 import {SellCryptoScreen} from '../Screens/sellCrypto/sellCrypto';
+import {ReferralScreen} from '../Screens/referalScreen/referalScreen';
+import {CreatePriceAlertScreen} from '../Screens/createPriceAlertScreen/createPriceAlertScreen';
+import {ChangeLanguageScreen} from '../Screens/changeLanguageScreen/changeLanguageScreen';
 
 export type RootStackParams = {
   SplashStack: NavigatorScreenParams<SplashStackParams>;
@@ -51,7 +53,6 @@ export type RootStackParams = {
   };
   BottomStack: NavigatorScreenParams<BottomStackParams>;
   NotificationScreen: undefined;
-  ProfileScreen: undefined;
   CryptoSellAndSwap: {
     title?: string;
     btnText?: string;
@@ -83,6 +84,7 @@ export type RootStackParams = {
   BettingScreen: undefined;
   SendAndReceiveOptionCryptoScreen: undefined;
   CardScreen: undefined;
+  ReferralScreen: undefined;
   BillPaymentScreen: {
     features: string;
   };
@@ -95,6 +97,8 @@ export type RootStackParams = {
   BuyAndSellScreen: undefined;
   CreateCoinScreen: undefined;
   SellCryptoScreen: undefined;
+  CreatePriceAlertScreen: undefined;
+  changeLanguageScreen: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStackParams>();
@@ -112,7 +116,6 @@ export const RootNavigator = () => {
         name="NotificationScreen"
         component={NotificationScreen}
       />
-      <RootStack.Screen name="ProfileScreen" component={ProfileScreen} />
       <RootStack.Screen
         name="CryptoSellAndSwap"
         component={CryptoSellAndSwap}
@@ -190,6 +193,15 @@ export const RootNavigator = () => {
       <RootStack.Screen name="BuyAndSellScreen" component={BuyAndSellScreen} />
       <RootStack.Screen name="CreateCoinScreen" component={CreateCoinScreen} />
       <RootStack.Screen name="SellCryptoScreen" component={SellCryptoScreen} />
+      <RootStack.Screen name="ReferralScreen" component={ReferralScreen} />
+      <RootStack.Screen
+        name="CreatePriceAlertScreen"
+        component={CreatePriceAlertScreen}
+      />
+      <RootStack.Screen
+        name="ChangeLanguageScreen"
+        component={ChangeLanguageScreen}
+      />
     </RootStack.Navigator>
   );
 };
