@@ -37,9 +37,9 @@ import {TopUpScreen} from '../Screens/topUpScreen.tsx/topUpScreen';
 import SellCryptoScreen from '../Screens/sellCrypto/sellCrypto';
 import ReferralProgramScreen from '../Screens/referralProgram/referralProgram';
 import SwapAndExchangeScreen from '../Screens/swapAndExchange/swapAndExchange';
-import LanguageScreen from '../Screens/Languages/LanguageScreen';
 import SendAndRecieveCredScreen from '../Screens/sendAndRecieveScreen.tsx/sendAndRecieveCredScreen';
 import {BillPaymentScreen} from '../Screens/featureScreen/featureScreen';
+import {LanguageScreen} from '../Screens/Languages/LanguageScreen';
 
 export type RootStackParams = {
   SplashStack: NavigatorScreenParams<SplashStackParams>;
