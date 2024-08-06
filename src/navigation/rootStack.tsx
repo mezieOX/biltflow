@@ -48,7 +48,7 @@ import {CreateCoinScreen} from '../Screens/createCoin/createCoin';
 
 export type RootStackParams = {
   SplashStack: NavigatorScreenParams<SplashStackParams>;
-  AuthStack: NavigatorScreenParams<AuthStackParams>;
+  AuthStack: NavigatorScreenParams<AuthStackParams>
   CongratulationScreen: {
     title: string;
     description?: string;

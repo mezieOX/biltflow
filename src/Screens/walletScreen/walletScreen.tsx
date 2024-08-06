@@ -4,6 +4,7 @@ import {Image, ScrollView, Text, View} from 'react-native';
 import {s as tw} from 'react-native-wind';
 import {Button} from '../../components';
 import {useNavigation} from '@react-navigation/core';
+import { TouchableOpacity } from 'react-native';
 
 const recentTradingHistory = [
   {id: 1, title: 'Ethereum', description: '0.0004586 ETH'},
@@ -52,11 +53,10 @@ export const WalletScreen = () => {
           </View>
           <View style={tw`pb-8 flex-row justify-between items-center`}>
             <Text style={tw`font-bold text-lg text-white`}>Your Coin</Text>
-            <Text
-              onPress={() => navigation.navigate('CreateCoinScreen')}
-              style={[tw`text-orange-500`]}>
-              Add Coin
-            </Text>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('CreateCoinScreen')}>
+              <Text style={[tw`text-orange-500`]}>Add Coin</Text>
+            </TouchableOpacity>
           </View>
         </View>
         <View style={[tw`mb-24`]}>

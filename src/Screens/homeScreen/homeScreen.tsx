@@ -189,11 +189,11 @@ export const HomeScreen = () => {
             <TouchableOpacity
               onPress={() => {
                 if (push) {
-                  return navigation.navigate(push as any);
+                  navigation.navigate(push as any);
                 }
-                navigation.navigate('BillPaymentScreen', {
-                  features: 'bill-payment',
-                });
+                // navigation.navigate('BillPaymentScreen', {
+                //   features: 'bill-payment',
+                // });
               }}
               key={id}
               style={tw`flex-col items-center text-center`}>

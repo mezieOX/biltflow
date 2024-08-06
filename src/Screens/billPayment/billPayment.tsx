@@ -55,12 +55,13 @@ const FeatureListItems = [
     id: 3,
     title: 'Withdraw',
     image: require('../../../assets/images/h4.png'),
-    route: 'WithdrawalScreen',
+    route: 'AddBankWithdrawalCard',
   },
   {
     id: 4,
     title: 'Swap',
     image: require('../../../assets/images/swap.png'),
+    route: 'SwapAndExchangeScreen',
   },
   {
     id: 5,
@@ -72,7 +73,7 @@ const FeatureListItems = [
     id: 6,
     title: 'Buy & Sell',
     image: require('../../../assets/images/h1.png'),
-    route: 'BuyAndSellScreen',
+    route: 'BuyAndSellCryptoScreen',
   },
 ];
 
