@@ -28,7 +28,6 @@ import {StatisticsScreen} from '../Screens/statisticScreen/statisticScreen';
 
 import {AccountScreen} from '../Screens/accountScreen/accountScreen';
 import AirtimeScreen from '../Screens/airtime/airtime';
-import DataScreen from '../Screens/data/data-sub';
 import TvSubscriptionScreen from '../Screens/tvSubscription/TvSubscriptionScreen';
 import SendAndReceieveCryptoScreen from '../Screens/sendAndRecieveScreen.tsx/sendAndRecieveScreen';
 import SucessScreen from '../Screens/successScreen.tsx/successScreen';
@@ -42,6 +41,10 @@ import {LanguageScreen} from '../Screens/Languages/LanguageScreen';
 import {BillPaymentScreen} from '../Screens/billPayment/billPayment';
 import {SupportScreen} from '../Screens/customerSupport/customerSupport';
 import {CreatePriceAlertScreen} from '../Screens/createPriceAlertScreen/createPriceAlertScreen';
+import ElectricityScreen from '../Screens/electricity/electricity';
+import BettingScreen from '../Screens/betting/betting';
+import DataScreen from '../Screens/data/data-sub';
+import {CreateCoinScreen} from '../Screens/createCoin/createCoin';
 
 export type RootStackParams = {
   SplashStack: NavigatorScreenParams<SplashStackParams>;
@@ -88,7 +91,6 @@ export type RootStackParams = {
   };
   AirtimeScreen: undefined;
   TvSubscriptionScreen: undefined;
-  DataScreen: undefined;
   SendAndRecieveCryptoScreen: undefined;
   SuccessScreen: undefined;
   ChooseCardScreen: undefined;
@@ -103,6 +105,10 @@ export type RootStackParams = {
   SupportScreen: undefined;
   ReferralScreen: undefined;
   ChangeLanguageScreen: undefined;
+  DataScreen: undefined;
+  ElectricityScreen: undefined;
+  CreateCoinScreen: undefined;
+  BettingScreen: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStackParams>();
@@ -214,6 +220,12 @@ export const RootNavigator = () => {
         name="ChangeLanguageScreen"
         component={LanguageScreen}
       />
+      <RootStack.Screen
+        name="ElectricityScreen"
+        component={ElectricityScreen}
+      />
+      <RootStack.Screen name="BettingScreen" component={BettingScreen} />
+      <RootStack.Screen name="CreateCoinScreen" component={CreateCoinScreen} />
       {/* <RootStack.Screen name="FeatureScreen" component={FeatureScreen} /> */}
     </RootStack.Navigator>
   );

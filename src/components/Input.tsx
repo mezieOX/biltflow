@@ -40,7 +40,7 @@ export const TextInputComp = ({
   style?: ViewStyle;
   placeholderStyle?: TextStyle;
   className?: string;
-  placeholderTextColor: string;
+  placeholderTextColor?: string;
 }) => {
   return (
     <View>

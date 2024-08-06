@@ -11,7 +11,7 @@ import {
 } from '../../assets';
 import {HomeScreen, MarketsScreen, WalletScreen} from '../Screens';
 import {ScanScreen} from '../Screens/scanScreen/scanScreen';
-import {Profile} from '../Screens/auth/profile/profile';
+import {Profile} from '../Screens/profile/profile';
 
 export type BottomStackParams = {
   HomeScreen: undefined;

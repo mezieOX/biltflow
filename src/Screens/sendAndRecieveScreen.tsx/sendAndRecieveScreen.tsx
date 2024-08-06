@@ -1,6 +1,5 @@
 import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
 import React from 'react';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import {TopSection} from '../../components';
 import TradeGainGraph from '../../components/icons/TradeGainGraph';
 import {useNavigation} from '@react-navigation/native';
@@ -45,7 +44,10 @@ const SendAndReceieveCryptoScreen = () => {
           marginTop: 10,
         }}>
         <Text style={{fontSize: 20, color: '#ffff'}}>Select</Text>
-        <Text style={{color: '#E5770E', fontSize: 16}}>Add Coins</Text>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('CreateCoinScreen')}>
+          <Text style={{color: '#E5770E', fontSize: 16}}>Add Coins</Text>
+        </TouchableOpacity>
       </View>
       <ScrollView
         contentContainerStyle={{paddingBottom: 20, gap: 45}}
