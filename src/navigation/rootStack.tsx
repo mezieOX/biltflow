@@ -25,10 +25,6 @@ import {
 } from '../Screens';
 import BottomTabStack, {BottomStackParams} from './bottomStack';
 import {StatisticsScreen} from '../Screens/statisticScreen/statisticScreen';
-<<<<<<< HEAD
-import {BillPaymentScreen} from '../Screens/auth/billPayment/billPayment';
-import {AccountScreen} from '../Screens/accountScreen/accountScreen';
-=======
 
 import {AccountScreen} from '../Screens/accountScreen/accountScreen';
 import AirtimeScreen from '../Screens/airtime/airtime';
@@ -44,8 +40,6 @@ import SwapAndExchangeScreen from '../Screens/swapAndExchange/swapAndExchange';
 import LanguageScreen from '../Screens/Languages/LanguageScreen';
 import SendAndRecieveCredScreen from '../Screens/sendAndRecieveScreen.tsx/sendAndRecieveCredScreen';
 import {BillPaymentScreen} from '../Screens/featureScreen/featureScreen';
-import {FeatureScreen} from '../Screens/auth/billPayment/billPayment';
->>>>>>> origin/bidemi-project
 
 export type RootStackParams = {
   SplashStack: NavigatorScreenParams<SplashStackParams>;
@@ -90,14 +84,19 @@ export type RootStackParams = {
   BillPaymentScreen: {
     features: string;
   };
-<<<<<<< HEAD
-=======
   AirtimeScreen: undefined;
   TvSubscriptionScreen: undefined;
   DataScreen: undefined;
   SendAndRecieveCryptoScreen: undefined;
   SuccessScreen: undefined;
->>>>>>> origin/bidemi-project
+  ChooseCardScreen: undefined;
+  TopUpScreen: undefined;
+  SellCryptoScreen: undefined;
+  ReferralProgramScreen: undefined;
+  SwapAndExchangeScreen: undefined;
+  LanguageScreen: undefined;
+  sendAndRecieveCredScreen: undefined;
+  FeatureScreen: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStackParams>();
@@ -169,8 +168,6 @@ export const RootNavigator = () => {
         component={BillPaymentScreen}
       />
       <RootStack.Screen name="AccountScreen" component={AccountScreen} />
-<<<<<<< HEAD
-=======
       <RootStack.Screen name="AirtimeScreen" component={AirtimeScreen} />
       <RootStack.Screen name="DataScreen" component={DataScreen} />
       <RootStack.Screen
@@ -198,8 +195,7 @@ export const RootNavigator = () => {
         name="sendAndRecieveCredScreen"
         component={SendAndRecieveCredScreen}
       />
-      <RootStack.Screen name="FeatureScreen" component={FeatureScreen} />
->>>>>>> origin/bidemi-project
+      {/* <RootStack.Screen name="FeatureScreen" component={FeatureScreen} /> */}
     </RootStack.Navigator>
   );
 };

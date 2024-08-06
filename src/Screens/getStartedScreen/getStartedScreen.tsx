@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {
   View,
   Image,
@@ -6,7 +6,6 @@ import {
   ImageBackground,
   useWindowDimensions,
   StyleSheet,
-  FlatList,
 } from 'react-native';
 import {s as tw} from 'react-native-wind';
 import {useNavigation} from '@react-navigation/native';
@@ -22,7 +21,6 @@ import Pagination from '../../components/Pagination';
 
 export const GetStartedScreen = () => {
   const navigation = useNavigation<INavigationSetting>();
-  const [next, setNext] = useState(false);
   const {width} = useWindowDimensions();
 
   const data = [
@@ -101,6 +99,9 @@ export const GetStartedScreen = () => {
         style={{flex: 1}}>
         <SafeAreaView style={{flex: 1}}>
           <Text
+            onPress={() =>
+              navigation.navigate('AuthStack', {screen: 'LoginScreen'})
+            }
             style={{
               color: '#FF7422',
               fontSize: 16,

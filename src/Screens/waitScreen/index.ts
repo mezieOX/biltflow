@@ -1,1 +1,1 @@
-export {WaitScreen} from "./waitScreen"
+export {WaitScreen} from './waitScreen';

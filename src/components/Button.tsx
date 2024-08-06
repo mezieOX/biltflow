@@ -8,22 +8,14 @@ export const Button = ({
   title,
   icon,
   login = false,
-<<<<<<< HEAD
-}: {
-  onPress: (value: any) => void;
-=======
   outline = false,
 }: {
   onPress?: (value: any) => void;
->>>>>>> origin/bidemi-project
   title: string;
   icon?: React.ReactNode;
   roundedFull?: boolean;
   login?: boolean;
-<<<<<<< HEAD
-=======
   outline?: boolean;
->>>>>>> origin/bidemi-project
 }) => {
   return (
     <Pressable
@@ -33,13 +25,10 @@ export const Button = ({
         {
           borderRadius: roundedFull ? 50 : 12,
           backgroundColor: login ? '#E5770E' : '#fff',
-<<<<<<< HEAD
-=======
           borderColor: outline ? '#E5770E' : '#fff',
         },
         outline && {
           borderWidth: 1,
->>>>>>> origin/bidemi-project
         },
       ]}>
       <Text
@@ -47,11 +36,7 @@ export const Button = ({
           styles.text,
           icon ? styles.height : null,
           {
-<<<<<<< HEAD
-            color: login ? '#fff' : '#ffffff',
-=======
             color: login ? '#fff' : outline ? '#E5770E' : '#ffffff',
->>>>>>> origin/bidemi-project
           },
         ]}>
         {title}
@@ -89,11 +74,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     fontSize: 18,
     lineHeight: 21,
-<<<<<<< HEAD
-    fontWeight: '700',
-=======
     fontWeight: '500',
->>>>>>> origin/bidemi-project
     letterSpacing: 0.25,
   },
   height: {

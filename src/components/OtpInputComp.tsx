@@ -22,18 +22,11 @@ export const OTPInputComp: FC<IOTPInputComp> = ({onChangeText, digits}) => {
   const styles = {
     pinCodeContainer: css`
       height: 56px;
-<<<<<<< HEAD
-      width: 56px;
-=======
->>>>>>> origin/bidemi-project
       border-radius: 10px;
       border-width: 1px;
       border-style: solid;
       color: white;
-<<<<<<< HEAD
-=======
       flex: 0.5;
->>>>>>> origin/bidemi-project
     `,
     filledPinCodeContainerStyle: css`
       border-width: 1px;
@@ -51,13 +44,10 @@ export const OTPInputComp: FC<IOTPInputComp> = ({onChangeText, digits}) => {
       theme={{
         pinCodeContainerStyle: styles.pinCodeContainer,
         filledPinCodeContainerStyle: styles.filledPinCodeContainerStyle,
-<<<<<<< HEAD
-=======
         containerStyle: {
           gap: 10,
           paddingHorizontal: 40,
         },
->>>>>>> origin/bidemi-project
       }}
     />
   );

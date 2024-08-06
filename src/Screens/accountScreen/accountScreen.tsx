@@ -1,13 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-import {ScrollView, View} from 'react-native';
-=======
 import {ScrollView, Text, View} from 'react-native';
->>>>>>> origin/bidemi-project
 import {s as tw} from 'react-native-wind';
-import {Button, TextInputComp, TopSection} from '../../components';
 import {useNavigation} from '@react-navigation/native';
 import {INavigationSetting} from '../../navigation/type';
+import {TopSection} from '../../components';
 
 export const AccountScreen = () => {
   const navigation = useNavigation<INavigationSetting>();
@@ -18,32 +14,6 @@ export const AccountScreen = () => {
       style={[tw`flex-1`, {backgroundColor: '#01041F'}]}>
       <TopSection settingsIcon={false} title="Account" searchIcon={false} />
 
-<<<<<<< HEAD
-      <View style={tw`px-4`}>
-        <TextInputComp
-          placeholder="USD"
-          secureTextEntry
-          label="Payment Method"
-        />
-        <TextInputComp
-          placeholder="$ 30,000,000"
-          label="Account Limits"
-          secureTextEntry
-        />
-        <TextInputComp
-          placeholder="Verify"
-          label="Verification"
-          secureTextEntry
-        />
-        <View style={tw`pt-4`}>
-          <Button
-            onPress={() => {
-              navigation.goBack();
-            }}
-            login
-            title={'Save'}
-          />
-=======
       <View
         style={[
           tw`px-4`,
@@ -92,7 +62,6 @@ export const AccountScreen = () => {
             }}>
             <Text style={{color: '#fff'}}>Verify</Text>
           </View>
->>>>>>> origin/bidemi-project
         </View>
       </View>
     </ScrollView>
