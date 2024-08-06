@@ -40,6 +40,7 @@ import SwapAndExchangeScreen from '../Screens/swapAndExchange/swapAndExchange';
 import SendAndRecieveCredScreen from '../Screens/sendAndRecieveScreen.tsx/sendAndRecieveCredScreen';
 import {LanguageScreen} from '../Screens/Languages/LanguageScreen';
 import {BillPaymentScreen} from '../Screens/billPayment/billPayment';
+import {CreatePriceAlertScreen} from '../Screens/createPriceAlertScreen/createPriceAlertScreen';
 
 export type RootStackParams = {
   SplashStack: NavigatorScreenParams<SplashStackParams>;
@@ -97,6 +98,7 @@ export type RootStackParams = {
   LanguageScreen: undefined;
   sendAndRecieveCredScreen: undefined;
   FeatureScreen: undefined;
+  CreatePriceAlertScreen: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStackParams>();
@@ -194,6 +196,10 @@ export const RootNavigator = () => {
       <RootStack.Screen
         name="sendAndRecieveCredScreen"
         component={SendAndRecieveCredScreen}
+      />
+      <RootStack.Screen
+        name="CreatePriceAlertScreen"
+        component={CreatePriceAlertScreen}
       />
       {/* <RootStack.Screen name="FeatureScreen" component={FeatureScreen} /> */}
     </RootStack.Navigator>
