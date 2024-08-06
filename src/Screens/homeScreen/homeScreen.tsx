@@ -34,25 +34,26 @@ const ListItems = [
     id: 1,
     title: 'Buy & Sell',
     image: require('../../../assets/images/h1.png'),
-    navigation: 'BuyAndSellCryptoScreen',
+    route: 'BuyAndSellScreen',
   },
   {
     id: 2,
     title: 'Send & Receive',
     image: require('../../../assets/images/h2.png'),
-    navigation: 'SendAndRecieveCryptoScreen',
+    route: 'SendAndRecieveCryptoScreen',
   },
   {
     id: 3,
     title: 'Pay Bills',
     image: require('../../../assets/images/h3.png'),
-    navigation: 'BillPaymentScreen',
   },
+
   {
-    id: 4,
+    id: 6,
     title: 'Withdraw',
     image: require('../../../assets/images/h4.png'),
-    navigation: 'AddBankWithdrawalCard',
+    route: 'WithdrawalScreen',
+    navigation: 'BillPaymentScreen',
   },
 ];
 
