@@ -25,8 +25,27 @@ import {
 } from '../Screens';
 import BottomTabStack, {BottomStackParams} from './bottomStack';
 import {StatisticsScreen} from '../Screens/statisticScreen/statisticScreen';
+<<<<<<< HEAD
 import {BillPaymentScreen} from '../Screens/auth/billPayment/billPayment';
 import {AccountScreen} from '../Screens/accountScreen/accountScreen';
+=======
+
+import {AccountScreen} from '../Screens/accountScreen/accountScreen';
+import AirtimeScreen from '../Screens/airtime/airtime';
+import DataScreen from '../Screens/data/data-sub';
+import TvSubscriptionScreen from '../Screens/tvSubscription/TvSubscriptionScreen';
+import SendAndReceieveCryptoScreen from '../Screens/sendAndRecieveScreen.tsx/sendAndRecieveScreen';
+import SucessScreen from '../Screens/successScreen.tsx/successScreen';
+import {ChooseCard} from '../Screens/fundScreen/fundScreen';
+import {TopUpScreen} from '../Screens/topUpScreen.tsx/topUpScreen';
+import SellCryptoScreen from '../Screens/sellCrypto/sellCrypto';
+import ReferralProgramScreen from '../Screens/referralProgram/referralProgram';
+import SwapAndExchangeScreen from '../Screens/swapAndExchange/swapAndExchange';
+import LanguageScreen from '../Screens/Languages/LanguageScreen';
+import SendAndRecieveCredScreen from '../Screens/sendAndRecieveScreen.tsx/sendAndRecieveCredScreen';
+import {BillPaymentScreen} from '../Screens/featureScreen/featureScreen';
+import {FeatureScreen} from '../Screens/auth/billPayment/billPayment';
+>>>>>>> origin/bidemi-project
 
 export type RootStackParams = {
   SplashStack: NavigatorScreenParams<SplashStackParams>;
@@ -71,6 +90,14 @@ export type RootStackParams = {
   BillPaymentScreen: {
     features: string;
   };
+<<<<<<< HEAD
+=======
+  AirtimeScreen: undefined;
+  TvSubscriptionScreen: undefined;
+  DataScreen: undefined;
+  SendAndRecieveCryptoScreen: undefined;
+  SuccessScreen: undefined;
+>>>>>>> origin/bidemi-project
 };
 
 const RootStack = createNativeStackNavigator<RootStackParams>();
@@ -142,6 +169,37 @@ export const RootNavigator = () => {
         component={BillPaymentScreen}
       />
       <RootStack.Screen name="AccountScreen" component={AccountScreen} />
+<<<<<<< HEAD
+=======
+      <RootStack.Screen name="AirtimeScreen" component={AirtimeScreen} />
+      <RootStack.Screen name="DataScreen" component={DataScreen} />
+      <RootStack.Screen
+        name="TvSubscriptionScreen"
+        component={TvSubscriptionScreen}
+      />
+      <RootStack.Screen
+        name="SendAndRecieveCryptoScreen"
+        component={SendAndReceieveCryptoScreen}
+      />
+      <RootStack.Screen name="SuccessScreen" component={SucessScreen} />
+      <RootStack.Screen name="ChooseCardScreen" component={ChooseCard} />
+      <RootStack.Screen name="TopUpScreen" component={TopUpScreen} />
+      <RootStack.Screen name="SellCryptoScreen" component={SellCryptoScreen} />
+      <RootStack.Screen
+        name="ReferralProgramScreen"
+        component={ReferralProgramScreen}
+      />
+      <RootStack.Screen
+        name="SwapAndExchangeScreen"
+        component={SwapAndExchangeScreen}
+      />
+      <RootStack.Screen name="LanguageScreen" component={LanguageScreen} />
+      <RootStack.Screen
+        name="sendAndRecieveCredScreen"
+        component={SendAndRecieveCredScreen}
+      />
+      <RootStack.Screen name="FeatureScreen" component={FeatureScreen} />
+>>>>>>> origin/bidemi-project
     </RootStack.Navigator>
   );
 };

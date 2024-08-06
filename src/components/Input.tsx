@@ -8,8 +8,15 @@ import {
   Text,
   TextInput,
   TextInputChangeEventData,
+<<<<<<< HEAD
   TouchableWithoutFeedback,
   View,
+=======
+  TextStyle,
+  TouchableWithoutFeedback,
+  View,
+  ViewStyle,
+>>>>>>> origin/bidemi-project
 } from 'react-native';
 import {s as tw} from 'react-native-wind';
 
@@ -21,24 +28,46 @@ export const TextInputComp = ({
   secureTextEntry,
   keyboardType,
   label,
+<<<<<<< HEAD
+=======
+  iconLeft,
+  style,
+  placeholderStyle,
+>>>>>>> origin/bidemi-project
 }: {
   icon?: ImageSourcePropType;
   placeholder: string;
   iconRight?: ImageSourcePropType;
+<<<<<<< HEAD
+=======
+  iconLeft?: ImageSourcePropType;
+>>>>>>> origin/bidemi-project
   support?: boolean;
   fill?: boolean;
   secureTextEntry?: boolean;
   keyboardType?: KeyboardTypeOptions;
   label?: string;
+<<<<<<< HEAD
 }) => {
   return (
     <>
+=======
+  style?: ViewStyle;
+  placeholderStyle?: TextStyle;
+}) => {
+  return (
+    <View>
+>>>>>>> origin/bidemi-project
       {label ? <Text style={tw`text-white pt-2`}>{label}</Text> : null}
       <View
         style={[
           tw`my-2 ${
             support ? 'border rounded-lg' : 'border-b '
           }  flex-row items-center bg-white rounded-xl px-4`,
+<<<<<<< HEAD
+=======
+          style,
+>>>>>>> origin/bidemi-project
         ]}>
         {icon ? (
           <Image
@@ -49,16 +78,30 @@ export const TextInputComp = ({
         {iconRight ? (
           <Image style={tw`h-5 w-5 mx-4`} source={iconRight} />
         ) : null}
+<<<<<<< HEAD
+=======
+        {/* {iconLeft ? <Image style={tw`w-8`} source={iconRight} /> : null} */}
+>>>>>>> origin/bidemi-project
         <TextInput
           keyboardType={keyboardType}
           placeholder={placeholder}
           style={[
+<<<<<<< HEAD
             tw`h-14 px-4 rounded-lg placeholder:text-red-500 outline-0  min-w-full`,
           ]}
           secureTextEntry={secureTextEntry}
         />
       </View>
     </>
+=======
+            tw`h-14 px-4 rounded-lg placeholder:text-red-500 outline-0 min-w-full`,
+          ]}
+          secureTextEntry={secureTextEntry}
+        />
+        {iconLeft ? <Image style={tw`w-4 h-4`} source={iconRight} /> : null}
+      </View>
+    </View>
+>>>>>>> origin/bidemi-project
   );
 };
 
@@ -153,7 +196,11 @@ export const SearchInputComp = ({
         ]}>
         <Image
           style={tw`h-4 w-4`}
+<<<<<<< HEAD
           source={require('../../assets/images/search.png')}
+=======
+          source={require('../../assets/images/Search.png')}
+>>>>>>> origin/bidemi-project
         />
         <TextInput
           onChange={onChange}

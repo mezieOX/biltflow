@@ -5,14 +5,24 @@ import {s as tw} from 'react-native-wind';
 import {useNavigation} from '@react-navigation/native';
 import {INavigationSetting} from '../../../navigation/type';
 import {Button, TextInputComp} from '../../../components';
+<<<<<<< HEAD
+=======
+import {SafeAreaView} from 'react-native-safe-area-context';
+>>>>>>> origin/bidemi-project
 
 export const VerificationScreen = () => {
   const navigation = useNavigation<INavigationSetting>();
 
   return (
+<<<<<<< HEAD
     <>
       <ScrollView
         style={[tw`flex-1`, {backgroundColor: '#01041F'}]}
+=======
+    <SafeAreaView style={{flex: 1, backgroundColor: '#01041F'}}>
+      <ScrollView
+        style={[tw`flex-1`, {paddingHorizontal: 16}]}
+>>>>>>> origin/bidemi-project
         showsVerticalScrollIndicator={false}>
         <TouchableOpacity
           style={tw`flex-row items-center w-full text-center justify-center items-center h-24`}
@@ -30,7 +40,11 @@ export const VerificationScreen = () => {
             OTP Verification
           </Text>
         </TouchableOpacity>
+<<<<<<< HEAD
         <View style={[tw`flex-column items-center pb-20 flex-1`]}>
+=======
+        <View style={[tw`flex-column items-center`]}>
+>>>>>>> origin/bidemi-project
           <View style={tw`flex-col items-center`}>
             <View style={tw`flex-column items-center text-center px-4`}>
               <Text
@@ -39,13 +53,19 @@ export const VerificationScreen = () => {
                 ]}>
                 we will send you a one time mobile password to this number
               </Text>
+<<<<<<< HEAD
               <View style={tw`pb-10`}>
                 <View style={tw`pb-14 pt-14`}>
+=======
+              <View style={tw``}>
+                <View style={tw``}>
+>>>>>>> origin/bidemi-project
                   <TextInputComp
                     placeholder="Nigeria"
                     label="Select Country"
                     icon={require('../../../../assets/images/ngn.png')}
                   />
+<<<<<<< HEAD
                   <TextInputComp
                     label="Enter Phone Number"
                     placeholder="080398357286"
@@ -73,3 +93,32 @@ export const VerificationScreen = () => {
 };
 
 
+=======
+                  <View style={{marginTop: 20}}>
+                    <TextInputComp
+                      label="Enter Phone Number"
+                      placeholder="080398357286"
+                      secureTextEntry
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+            <View style={{marginTop: 87}}>
+              <Button
+                onPress={() => {
+                  navigation.navigate('AuthStack', {
+                    screen: 'VerificationConfirmScreen',
+                  });
+                }}
+                login
+                title={'Get OTP'}
+              />
+            </View>
+          </View>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
+};
+>>>>>>> origin/bidemi-project
