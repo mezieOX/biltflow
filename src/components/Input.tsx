@@ -8,8 +8,10 @@ import {
   Text,
   TextInput,
   TextInputChangeEventData,
+  TextStyle,
   TouchableWithoutFeedback,
   View,
+  ViewStyle,
 } from 'react-native';
 import {s as tw} from 'react-native-wind';
 
@@ -22,6 +24,8 @@ export const TextInputComp = ({
   keyboardType,
   label,
   iconLeft,
+  style,
+  placeholderStyle,
 }: {
   icon?: ImageSourcePropType;
   placeholder: string;
@@ -32,15 +36,18 @@ export const TextInputComp = ({
   secureTextEntry?: boolean;
   keyboardType?: KeyboardTypeOptions;
   label?: string;
+  style?: ViewStyle;
+  placeholderStyle?: TextStyle;
 }) => {
   return (
-    <>
+    <View>
       {label ? <Text style={tw`text-white pt-2`}>{label}</Text> : null}
       <View
         style={[
           tw`my-2 ${
             support ? 'border rounded-lg' : 'border-b '
           }  flex-row items-center bg-white rounded-xl px-4`,
+          style,
         ]}>
         {icon ? (
           <Image
@@ -56,13 +63,13 @@ export const TextInputComp = ({
           keyboardType={keyboardType}
           placeholder={placeholder}
           style={[
-            tw`h-14 px-4 rounded-lg placeholder:text-red-500 outline-0  min-w-full`,
+            tw`h-14 px-4 rounded-lg placeholder:text-red-500 outline-0 min-w-full`,
           ]}
           secureTextEntry={secureTextEntry}
         />
         {iconLeft ? <Image style={tw`w-4 h-4`} source={iconRight} /> : null}
       </View>
-    </>
+    </View>
   );
 };
 

@@ -1,11 +1,11 @@
 /* eslint-disable prettier/prettier */
-import React, { useState } from 'react';
-import { Alert, Text, View } from 'react-native';
-import { s as tw } from 'react-native-wind';
-import { useNavigation } from '@react-navigation/native';
-import { INavigationSetting } from '../../navigation/type';
-import { Button, TextInputComp } from '../../components';
-import { addWithdrawal } from '../../APIs/api';
+import React, {useState} from 'react';
+import {Alert, Text, View} from 'react-native';
+import {s as tw} from 'react-native-wind';
+import {useNavigation} from '@react-navigation/native';
+import {INavigationSetting} from '../../navigation/type';
+import {Button, TextInputComp} from '../../components';
+// import { addWithdrawal } from '../../APIs/api';
 
 export const AddWithdrawalBank = () => {
   const navigation = useNavigation<INavigationSetting>();
@@ -20,7 +20,7 @@ export const AddWithdrawalBank = () => {
     }
 
     try {
-      const response = await addWithdrawal(accountNumber, bankCode, parseFloat(amount));
+      // const response = await addWithdrawal(accountNumber, bankCode, parseFloat(amount));
       Alert.alert('Success', 'Withdrawal successful.');
       navigation.navigate('AddBankWithdrawalCard'); // Navigate to the next screen after successful withdrawal
     } catch (error) {
@@ -42,28 +42,14 @@ export const AddWithdrawalBank = () => {
         <TextInputComp
           placeholder="Enter 10 digits Account Number"
           keyboardType="numeric"
-          value={accountNumber}
-          onChangeText={setAccountNumber}
         />
         <Text style={tw`text-black pt-4`}>Select Bank</Text>
-        <TextInputComp
-          placeholder="Enter Bank Code"
-          value={bankCode}
-          onChangeText={setBankCode}
-        />
+        <TextInputComp placeholder="Enter Bank Code" />
         <Text style={tw`text-black pt-4`}>Enter Amount</Text>
-        <TextInputComp
-          placeholder="Enter Amount"
-          keyboardType="numeric"
-          value={amount}
-          onChangeText={setAmount}
-        />
+        <TextInputComp placeholder="Enter Amount" keyboardType="numeric" />
       </View>
       <View style={tw`pt-20 px-6`}>
-        <Button
-          onPress={handleWithdraw}
-          title={'Withdraw'}
-        />
+        <Button onPress={handleWithdraw} title={'Withdraw'} />
       </View>
     </View>
   );

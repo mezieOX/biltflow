@@ -139,7 +139,7 @@ export const GetStartedScreen = () => {
                       marginTop: 40,
                     }}
                   />
-                  <Text style={[styles.title, {marginTop: 104}]}>
+                  <Text style={[styles.title, {marginTop: 50}]}>
                     {item.title}
                   </Text>
                   <Text style={[styles.title, {marginTop: 20}]}>
@@ -163,12 +163,9 @@ export const GetStartedScreen = () => {
               <Button
                 login
                 onPress={() => {
-                  if (next) {
-                    return navigation.navigate('AuthStack', {
-                      screen: 'RegisterScreen',
-                    });
-                  }
-                  setNext(true);
+                  navigation.navigate('AuthStack', {
+                    screen: 'RegisterScreen',
+                  });
                 }}
                 title={'Next'}
               />
@@ -186,31 +183,6 @@ export const GetStartedScreen = () => {
           </View>
         </SafeAreaView>
       </ImageBackground>
-      {/* <View
-        style={tw`flex-col items-center mt-5 absolute bottom-5 justify-center text-center px-4`}>
-        <Button
-          login
-          onPress={() => {
-            if (next) {
-              return navigation.navigate('AuthStack', {
-                screen: 'RegisterScreen',
-              });
-            }
-            setNext(true);
-          }}
-          title={'Next'}
-        />
-        <View style={tw`flex-row items-center gap-4`}>
-          <Image
-            source={require('../../../assets/images/lock2.png')}
-            resizeMode="contain"
-            style={tw`h-4 w-4 mx-2`}
-          />
-          <Text style={tw`text-white py-4`}>
-            Your information is always secure
-          </Text>
-        </View>
-      </View> */}
     </View>
   );
 };

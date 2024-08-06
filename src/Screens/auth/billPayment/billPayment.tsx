@@ -8,50 +8,62 @@ import {INavigationSetting} from '../../../navigation/type';
 const ListItems = [
   {
     id: 1,
-    title: 'Data',
-    image: require('../../../../assets/images/b1.png'),
-    route: 'DataScreen',
+    title: 'Buy & Sell',
+    image: require('../../../../assets/images/h1.png'),
+    route: 'BuyAndSellCryptoScreen',
   },
   {
     id: 2,
-    title: 'CableTV',
-    image: require('../../../../assets/images/b2.png'),
-    route: 'TvSubscriptionScreen',
+    title: 'Send & Receive',
+    image: require('../../../../assets/images/h2.png'),
+    route: 'SendAndRecieveCryptoScreen',
   },
   {
     id: 3,
-    title: 'Education',
-    image: require('../../../../assets/images/b3.png'),
+    title: 'Pay Bills',
+    image: require('../../../../assets/images/h3.png'),
+    route: 'ChooseCardScreen',
   },
   {
     id: 4,
-    title: 'Electricity',
-    image: require('../../../../assets/images/b4.png'),
+    title: 'Withdraw',
+    image: require('../../../../assets/images/h4.png'),
+    route: 'AddBankWithdrawalCard',
   },
   {
     id: 5,
-    title: 'Airtime',
-    image: require('../../../../assets/images/b5.png'),
-    route: 'AirtimeScreen',
+    title: 'Swap',
+    image: require('../../../../assets/images/swap-logo.png'),
+    route: 'SwapAndExchangeScreen',
   },
   {
     id: 6,
-    title: 'Betting',
-    image: require('../../../../assets/images/b6.png'),
+    title: 'Refer',
+    image: require('../../../../assets/images/refer-logo.png'),
+    route: 'ReferralProgramScreen',
   },
 ];
 
-export const BillPaymentScreen = () => {
+export const FeatureScreen = () => {
   const navigation = useNavigation<INavigationSetting>();
   const route = useRoute();
-  const {features} = route.params as any;
 
   return (
-    <View style={[tw`flex-1 bg-white`, {backgroundColor: '#01041F'}]}>
-      <TopSection
-        title={features === 'features' ? 'Features' : 'Bills Payment'}
-      />
-      <View style={[tw`mx-4 flex-row flex-wrap justify-between`]}>
+    <View
+      style={[
+        tw`flex-1 bg-white`,
+        {backgroundColor: '#01041F', paddingTop: 20},
+      ]}>
+      <View style={{paddingHorizontal: 16}}>
+        <TopSection searchIcon={false} title={'Features'} />
+      </View>
+      <View
+        style={[
+          tw`flex-row flex-wrap justify-between`,
+          {
+            marginTop: 15,
+          },
+        ]}>
         {ListItems.map(({id, title, image, route}) => (
           <TouchableOpacity
             onPress={() => {

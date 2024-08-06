@@ -3,12 +3,9 @@ import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {s as tw} from 'react-native-wind';
 import {INavigationSetting} from '../navigation/type';
 import {useNavigation} from '@react-navigation/native';
-import {
-  ArrowLeftIcon,
-  NotificationIcon,
-  SettingsIcon,
-} from '../../assets/svgIcons';
+import {NotificationIcon, SettingsIcon} from '../../assets/svgIcons';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import ArrowLeftIcon from './icons/ArrowLeft';
 
 export const TopSection = ({
   title,
@@ -29,9 +26,11 @@ export const TopSection = ({
 
   return (
     <SafeAreaView style={[tw`flex-row justify-between items-center  px-2`]}>
-      <TouchableOpacity onPress={() => navigation.goBack()}>
-        <ArrowLeftIcon />
-      </TouchableOpacity>
+      {showBack && (
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <ArrowLeftIcon />
+        </TouchableOpacity>
+      )}
       <View
         style={{
           flexDirection: 'row',
