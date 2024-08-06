@@ -25,7 +25,8 @@ export const TextInputComp = ({
   label,
   iconLeft,
   style,
-  placeholderStyle,
+  className,
+  placeholderTextColor,
 }: {
   icon?: ImageSourcePropType;
   placeholder: string;
@@ -38,6 +39,8 @@ export const TextInputComp = ({
   label?: string;
   style?: ViewStyle;
   placeholderStyle?: TextStyle;
+  className?: string;
+  placeholderTextColor: string;
 }) => {
   return (
     <View>
@@ -46,7 +49,7 @@ export const TextInputComp = ({
         style={[
           tw`my-2 ${
             support ? 'border rounded-lg' : 'border-b '
-          }  flex-row items-center bg-white rounded-xl px-4`,
+          }  flex-row items-center bg-white rounded-xl px-4 `,
           style,
         ]}>
         {icon ? (
@@ -62,8 +65,9 @@ export const TextInputComp = ({
         <TextInput
           keyboardType={keyboardType}
           placeholder={placeholder}
+          placeholderTextColor={placeholderTextColor}
           style={[
-            tw`h-14 px-4 rounded-lg placeholder:text-red-500 outline-0 min-w-full`,
+            tw`h-14 px-4 rounded-lg placeholder:text-white outline-0 min-w-full ${className}`,
           ]}
           secureTextEntry={secureTextEntry}
         />
@@ -180,16 +184,21 @@ export const TextAreaInputComp = ({
   label,
   placeholder,
   support,
+  className,
 }: {
   label?: string;
   placeholder: string;
   support?: boolean;
+  className: string;
 }) => {
   return (
     <View style={tw`my-2`}>
       {label ? (
         <Text
-          style={[tw`py-2 text-xs mb-3 uppercase text-black`, styles.label]}>
+          style={[
+            tw`py-2 text-xs mb-3 uppercase text-white border-white `,
+            styles.label,
+          ]}>
           {label}
         </Text>
       ) : null}
@@ -197,14 +206,15 @@ export const TextAreaInputComp = ({
         multiline={true}
         numberOfLines={10}
         placeholder={placeholder}
+        placeholderTextColor={'white'}
         style={[
-          tw`bg-gray-100 h-16 px-4 py-4 rounded-lg border-2 min-w-full`,
+          tw`bg-gray-100 h-16 px-4 py-4 rounded-lg border-2 min-w-full ${className}`,
           styles.input,
           {
             height: support ? 150 : 250,
             textAlignVertical: 'top',
             backgroundColor: 'transparent',
-            borderColor: 'rgba(0, 0, 0, 0.11)',
+            borderColor: 'white',
           },
         ]}
       />

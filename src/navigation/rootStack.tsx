@@ -40,6 +40,7 @@ import SwapAndExchangeScreen from '../Screens/swapAndExchange/swapAndExchange';
 import SendAndRecieveCredScreen from '../Screens/sendAndRecieveScreen.tsx/sendAndRecieveCredScreen';
 import {LanguageScreen} from '../Screens/Languages/LanguageScreen';
 import {BillPaymentScreen} from '../Screens/billPayment/billPayment';
+import {SupportScreen} from '../Screens/customerSupport/customerSupport';
 import {CreatePriceAlertScreen} from '../Screens/createPriceAlertScreen/createPriceAlertScreen';
 
 export type RootStackParams = {
@@ -99,6 +100,9 @@ export type RootStackParams = {
   sendAndRecieveCredScreen: undefined;
   FeatureScreen: undefined;
   CreatePriceAlertScreen: undefined;
+  SupportScreen: undefined;
+  ReferralScreen: undefined;
+  ChangeLanguageScreen: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStackParams>();
@@ -200,6 +204,15 @@ export const RootNavigator = () => {
       <RootStack.Screen
         name="CreatePriceAlertScreen"
         component={CreatePriceAlertScreen}
+      />
+      <RootStack.Screen name="SupportScreen" component={SupportScreen} />
+      <RootStack.Screen
+        name="ReferralScreen"
+        component={ReferralProgramScreen}
+      />
+      <RootStack.Screen
+        name="ChangeLanguageScreen"
+        component={LanguageScreen}
       />
       {/* <RootStack.Screen name="FeatureScreen" component={FeatureScreen} /> */}
     </RootStack.Navigator>

@@ -9,7 +9,7 @@ import React from 'react';
 import {Button, TopSection} from '../../components';
 import ReferralIcon from '../../components/icons/ReferralIcon';
 
-const ReferralProgramScreen = () => {
+export const ReferralProgramScreen = () => {
   return (
     <View style={{flex: 1, backgroundColor: '#01041F', paddingTop: 20}}>
       <TopSection title="Referral Program" searchIcon={false} />
